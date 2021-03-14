@@ -1,0 +1,148 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "RegisterVerification"
+- "RegisterVerification_Previews"
+provides-nominal:
+- "5Libra20RegisterVerificationV"
+- "5Libra29RegisterVerification_PreviewsV"
+provides-member:
+- ["5Libra20RegisterVerificationV", ""]
+- ["5Libra29RegisterVerification_PreviewsV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "Button"
+- "PreviewProvider"
+- "RegisterVerification"
+- "RegisterVerification_Previews"
+- !private "RoundedBorderTextFieldStyle"
+- "State"
+- "String"
+- "StringLiteralType"
+- !private "Text"
+- !private "TextField"
+- !private "VStack"
+- "View"
+depends-member:
+- !private ["7SwiftUI6ButtonV", "init"]
+- ["7SwiftUI15DynamicPropertyP", "init"]
+- ["7SwiftUI15DynamicPropertyP", "wrappedValue"]
+- !private ["SQ", "init"]
+- ["7SwiftUI15PreviewProviderP", "Previews"]
+- !private ["7SwiftUI15PreviewProviderP", "RegisterVerification"]
+- ["7SwiftUI15PreviewProviderP", ""]
+- ["7SwiftUI15PreviewProviderP", "_Default_Previews"]
+- ["7SwiftUI15PreviewProviderP", "_platform"]
+- ["7SwiftUI15PreviewProviderP", "_previews"]
+- ["7SwiftUI15PreviewProviderP", "platform"]
+- ["7SwiftUI15PreviewProviderP", "previews"]
+- !private ["5Libra20RegisterVerificationV", "$verificationEmail"]
+- ["5Libra20RegisterVerificationV", "Body"]
+- !private ["5Libra20RegisterVerificationV", "Button"]
+- !private ["5Libra20RegisterVerificationV", "RoundedBorderTextFieldStyle"]
+- ["5Libra20RegisterVerificationV", "State"]
+- ["5Libra20RegisterVerificationV", "String"]
+- !private ["5Libra20RegisterVerificationV", "Text"]
+- !private ["5Libra20RegisterVerificationV", "TextField"]
+- !private ["5Libra20RegisterVerificationV", "VStack"]
+- ["5Libra20RegisterVerificationV", "View"]
+- ["5Libra20RegisterVerificationV", "_Default_Body"]
+- ["5Libra20RegisterVerificationV", "_makeView"]
+- ["5Libra20RegisterVerificationV", "_makeViewList"]
+- !private ["5Libra20RegisterVerificationV", "_verificationEmail"]
+- ["5Libra20RegisterVerificationV", "body"]
+- ["5Libra20RegisterVerificationV", "deinit"]
+- ["5Libra20RegisterVerificationV", "init"]
+- !private ["5Libra20RegisterVerificationV", "verificationEmail"]
+- ["5Libra29RegisterVerification_PreviewsV", "Previews"]
+- !private ["5Libra29RegisterVerification_PreviewsV", "RegisterVerification"]
+- ["5Libra29RegisterVerification_PreviewsV", "View"]
+- ["5Libra29RegisterVerification_PreviewsV", "_Default_Previews"]
+- ["5Libra29RegisterVerification_PreviewsV", "_platform"]
+- ["5Libra29RegisterVerification_PreviewsV", "_previews"]
+- ["5Libra29RegisterVerification_PreviewsV", "deinit"]
+- ["5Libra29RegisterVerification_PreviewsV", "init"]
+- ["5Libra29RegisterVerification_PreviewsV", "platform"]
+- ["5Libra29RegisterVerification_PreviewsV", "previews"]
+- !private ["7SwiftUI27RoundedBorderTextFieldStyleV", "init"]
+- ["7SwiftUI5StateV", "init"]
+- ["7SwiftUI5StateV", "wrappedValue"]
+- !private ["7SwiftUI4TextV", "init"]
+- !private ["7SwiftUI9TextFieldV", "init"]
+- !private ["7SwiftUI9TextFieldV", "textFieldStyle"]
+- !private ["7SwiftUI14TextFieldStyleP", "init"]
+- !private ["7SwiftUI6VStackV", "init"]
+- !private ["7SwiftUI4ViewP", "$verificationEmail"]
+- ["7SwiftUI4ViewP", "Body"]
+- !private ["7SwiftUI4ViewP", "Button"]
+- !private ["7SwiftUI4ViewP", "RoundedBorderTextFieldStyle"]
+- ["7SwiftUI4ViewP", "State"]
+- !private ["7SwiftUI4ViewP", "Text"]
+- !private ["7SwiftUI4ViewP", "TextField"]
+- !private ["7SwiftUI4ViewP", "VStack"]
+- ["7SwiftUI4ViewP", ""]
+- ["7SwiftUI4ViewP", "_Default_Body"]
+- ["7SwiftUI4ViewP", "_makeView"]
+- ["7SwiftUI4ViewP", "_makeViewList"]
+- ["7SwiftUI4ViewP", "body"]
+- !private ["7SwiftUI4ViewP", "init"]
+- !private ["7SwiftUI4ViewP", "padding"]
+- !private ["7SwiftUI4ViewP", "textFieldStyle"]
+- !private ["7SwiftUI11ViewBuilderV", "buildBlock"]
+- ["7SwiftUI16_PreviewProviderP", "Previews"]
+- !private ["7SwiftUI16_PreviewProviderP", "RegisterVerification"]
+- ["7SwiftUI16_PreviewProviderP", ""]
+- ["7SwiftUI16_PreviewProviderP", "_Default_Previews"]
+- ["7SwiftUI16_PreviewProviderP", "_platform"]
+- ["7SwiftUI16_PreviewProviderP", "_previews"]
+- ["7SwiftUI16_PreviewProviderP", "platform"]
+- ["7SwiftUI16_PreviewProviderP", "previews"]
+depends-nominal:
+- !private "7SwiftUI6ButtonV"
+- "7SwiftUI15DynamicPropertyP"
+- !private "SQ"
+- "7SwiftUI15PreviewProviderP"
+- "5Libra20RegisterVerificationV"
+- "5Libra29RegisterVerification_PreviewsV"
+- !private "7SwiftUI27RoundedBorderTextFieldStyleV"
+- "7SwiftUI5StateV"
+- !private "7SwiftUI4TextV"
+- !private "7SwiftUI9TextFieldV"
+- !private "7SwiftUI14TextFieldStyleP"
+- !private "7SwiftUI6VStackV"
+- "7SwiftUI4ViewP"
+- !private "7SwiftUI11ViewBuilderV"
+- "7SwiftUI16_PreviewProviderP"
+depends-dynamic-lookup:
+depends-external:
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/usr/include/Darwin.apinotes"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Volumes/SharedDrive/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "852326f9279057ef04530a1fcf86b372"

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>6CDE13D4-A69F-4848-972C-D2C0DA4E6DEA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6CDE13D4-A69F-4848-972C-D2C0DA4E6DEA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Libra project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Libra</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Preview Libra</string>
+			<key>timeStartedRecording</key>
+			<real>616517976.97427905</real>
+			<key>timeStoppedRecording</key>
+			<real>616517979.74270797</real>
+			<key>title</key>
+			<string>Preview Libra</string>
+			<key>uniqueIdentifier</key>
+			<string>6CDE13D4-A69F-4848-972C-D2C0DA4E6DEA</string>
+		</dict>
+		<key>9D7FCEAA-A02C-49FB-86A9-00C778FFC64D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9D7FCEAA-A02C-49FB-86A9-00C778FFC64D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Libra project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Libra</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Preview Libra</string>
+			<key>timeStartedRecording</key>
+			<real>616522086.67435598</real>
+			<key>timeStoppedRecording</key>
+			<real>616522087.74558699</real>
+			<key>title</key>
+			<string>Preview Libra</string>
+			<key>uniqueIdentifier</key>
+			<string>9D7FCEAA-A02C-49FB-86A9-00C778FFC64D</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

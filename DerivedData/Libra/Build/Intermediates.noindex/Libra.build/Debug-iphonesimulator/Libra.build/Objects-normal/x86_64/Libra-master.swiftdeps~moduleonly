@@ -1,0 +1,19 @@
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+options: "b3783c88e47469bd1ea04d131aa8b235"
+build_time: [1594824481, 254029000]
+inputs:
+  "/Users/catalina/Desktop/Libra/Libra/Model/StatelessApi.swift": [1594623035, 9204277]
+  "/Users/catalina/Desktop/Libra/Libra/View/Register/RegisterScreen.swift": [1594733608, 566102354]
+  "/Users/catalina/Desktop/Libra/Libra/AppDelegate.swift": [1594438319, 498366443]
+  "/Users/catalina/Desktop/Libra/Libra/SceneDelegate.swift": [1594737098, 909782125]
+  "/Users/catalina/Desktop/Libra/Libra/View/Register/Form/RegisterDisplayName.swift": [1594546559, 154599973]
+  "/Users/catalina/Desktop/Libra/Libra/View/Register/Form/RegisterEmail.swift": [1594546601, 956386476]
+  "/Users/catalina/Desktop/Libra/Libra/ContentView.swift": [1594438319, 531144504]
+  "/Users/catalina/Desktop/Libra/Libra/View/Register/Form/RegisterPassword.swift": [1594546591, 990832109]
+  "/Users/catalina/Desktop/Libra/Libra/ViewModel/RegistrationForm.swift": [1594565339, 228179981]
+  "/Users/catalina/Desktop/Libra/Libra/View/Register/Form/RegisterVerification.swift": [1594560106, 466206930]
+  "/Users/catalina/Desktop/Libra/Libra/View/Register/Form/RegisterUsername.swift": [1594546577, 149649872]
+  "/Users/catalina/Desktop/Libra/Libra/View/Login/LoginScreen.swift": [1594822275, 870893633]
+  "/Users/catalina/Desktop/Libra/DerivedData/Libra/Build/Intermediates.noindex/Libra.build/Debug-iphonesimulator/Libra.build/DerivedSources/CoreDataGenerated/Libra/Entity+CoreDataClass.swift": [1594824481, 133709708]
+  "/Users/catalina/Desktop/Libra/DerivedData/Libra/Build/Intermediates.noindex/Libra.build/Debug-iphonesimulator/Libra.build/DerivedSources/CoreDataGenerated/Libra/Entity+CoreDataProperties.swift": [1594824481, 134892631]
+  "/Users/catalina/Desktop/Libra/DerivedData/Libra/Build/Intermediates.noindex/Libra.build/Debug-iphonesimulator/Libra.build/DerivedSources/CoreDataGenerated/Libra/Libra+CoreDataModel.swift": [1594824481, 131325247]
