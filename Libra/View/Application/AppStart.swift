@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AppStart: View {  
     
-    @State var isLoggedIn: Bool
+    @State var isLoggedIn: Bool = false
     
     init() {
         let appSession = AppSession()

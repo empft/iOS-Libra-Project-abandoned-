@@ -87,6 +87,10 @@ A loading indicator that can be toggle, better than `Loading()`
 ### NavBackButton
 A customisable back button in navigation bar, looks slightly different from default back button
 
+### Special Thanks
+Icons from:
+- uxwing.com
+- iconmonstr.com
 
 
 

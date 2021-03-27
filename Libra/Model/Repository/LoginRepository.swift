@@ -11,26 +11,27 @@ import Combine
 
 // Handle Login/Registration Process
 struct LoginRepository {
+    private let api = StatelessApi.shared
 
     /// Register an account and return whether registration is successful
     func register(form: RegistrationForm) -> AnyPublisher<(data: Bool,response: URLResponse),Error> {
         
-        return StatelessApi.shared.register(form: form)
+        return api.register(form: form)
     }
     
     /// Login and return whether login is successful
     func login(username: String, password: String) -> AnyPublisher<(data: Bool,response: URLResponse),Error> {
-        return StatelessApi.shared.login(username: username, password: password)
+        return api.login(username: username, password: password)
     }
     
     
     
     func requestCode(email: String) -> AnyPublisher<[Error], Never> {
-        return StatelessApi.shared.requestCode(email: email)
+        return api.requestCode(email: email)
     }
     
     func usernameExists(username: String) -> AnyPublisher<Bool,Error> {
-        return StatelessApi.shared.usernameExists(username: username)
+        return api.usernameExists(username: username)
     }
     
     

@@ -8,7 +8,8 @@
 
 import Foundation
 
-class LinkKey: QuantumKey {
+class LinkKey {
+ 
     typealias keyType = String
     
     var keychain: QuantumKeychain = QuantumKeychain()

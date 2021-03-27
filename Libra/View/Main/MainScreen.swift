@@ -11,7 +11,10 @@ import SwiftUI
 struct MainScreen: View {
     var body: some View {
         TabView {
-            
+            PaymentView()
+                .tabItem {
+                    Label("Payment", systemImage: "creditcard.fill")
+                }
         }
     }
 }

@@ -26,9 +26,11 @@ class UserApi {
         HTTPCookieStorage.shared.setCookie(cookie)
     }
     
+    /*
     func getProfile() -> AnyPublisher<Any, Error> {
         
     }
+    */
     
     
     deinit {

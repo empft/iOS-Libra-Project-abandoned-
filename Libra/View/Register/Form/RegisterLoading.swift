@@ -38,7 +38,7 @@ struct RegisterLoading: View {
     }
     
     private func register() {
-        self.viewModel.register()
+        _ = self.viewModel.register()
     }
 }
 

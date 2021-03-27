@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="DeviceConfig" representedClassName="DeviceConfig" syncable="YES" codeGenerationType="class"/>
+    <entity name="ExchangeRates" representedClassName="ExchangeRates" syncable="YES" codeGenerationType="class">
+        <attribute name="currency" optional="YES" attributeType="String"/>
+        <attribute name="rate" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+    </entity>
+    <entity name="LastUpdated" representedClassName="LastUpdated" syncable="YES" codeGenerationType="class">
+        <attribute name="attribute1" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="key" attributeType="UUID" usesScalarValueType="NO"/>
+    </entity>
     <entity name="Linkage" representedClassName="Linkage" syncable="YES" codeGenerationType="class">
         <attribute name="key" optional="YES" attributeType="String"/>
         <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserProfile" inverseName="walletOwnerLink" inverseEntity="UserProfile"/>
@@ -21,16 +29,18 @@
         <relationship name="walletOwnerLink" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Linkage" inverseName="owner" inverseEntity="Linkage"/>
     </entity>
     <entity name="Wallet" representedClassName="Wallet" syncable="YES" codeGenerationType="class">
-        <attribute name="balance" optional="YES"/>
+        <attribute name="balance" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="key" optional="YES" attributeType="String"/>
         <relationship name="transactionHistory" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Transaction"/>
         <relationship name="walletUserLink" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Linkage" inverseName="wallet" inverseEntity="Linkage"/>
     </entity>
     <elements>
         <element name="DeviceConfig" positionX="-153" positionY="-72" width="128" height="43"/>
+        <element name="ExchangeRates" positionX="-147.3571166992188" positionY="-245.476806640625" width="128" height="73"/>
         <element name="Linkage" positionX="-125.04296875" positionY="-12.7890625" width="128" height="88"/>
         <element name="Transaction" positionX="224.546875" positionY="-45.70703125" width="128" height="103"/>
         <element name="UserProfile" positionX="-354.9140625" positionY="-187.21875" width="128" height="133"/>
-        <element name="Wallet" positionX="39.31640625" positionY="-182.2421875" width="128" height="103"/>
+        <element name="Wallet" positionX="39.31640625" positionY="-182.2421875" width="128" height="89"/>
+        <element name="LastUpdated" positionX="-162" positionY="-99" width="128" height="59"/>
     </elements>
 </model>

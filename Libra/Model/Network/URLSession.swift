@@ -27,7 +27,7 @@ extension URLSession {
     }
     
     // return decoded data with everything handled
-    func getData<T: Decodable & JsonBase>(for urlRequest: URLRequest, using jsonStruct: T) -> AnyPublisher<T.ResultType,Error> {
+    func getData<T: Decodable & JsonBase>(for urlRequest: URLRequest, using jsonStruct: T.Type) -> AnyPublisher<T.ResultType,Error> {
         self.dataTaskErrorHandled(for: urlRequest)
         .map { $0.data }
         .decode(type: T.self, decoder: JSONDecoder())
@@ -46,7 +46,7 @@ extension URLSession {
     func getBool(for urlRequest: URLRequest) -> AnyPublisher<Bool,Error> {
         self.dataTaskErrorHandled(for: urlRequest)
         .map { $0.data }
-        .decode(type: JsonBool.self, decoder: JSONDecoder())
+        .decode(type: BoolJson.self, decoder: JSONDecoder())
         .tryMap { decoded in
             if decoded.success {
                 return decoded.data
@@ -59,7 +59,7 @@ extension URLSession {
     }
     
     // return decoded data and response with everything handled
-    func getDataResponse<T: Decodable & JsonBase>(for urlRequest: URLRequest, using jsonStruct: T) -> AnyPublisher<(data: T.ResultType, response: URLResponse),Error> {
+    func getDataResponse<T: Decodable & JsonBase>(for urlRequest: URLRequest, using jsonStruct: T.Type) -> AnyPublisher<(data: T.ResultType, response: URLResponse),Error> {
         self.dataTaskErrorHandled(for: urlRequest)
         .tryMap { (data, response) in
             let decoded = try JSONDecoder().decode(T.self, from: data)
@@ -77,7 +77,7 @@ extension URLSession {
     func getBoolResponse(for urlRequest: URLRequest) -> AnyPublisher<(data: Bool, response: URLResponse),Error> {
         self.dataTaskErrorHandled(for: urlRequest)
         .tryMap { (data, response) in
-            let decoded = try JSONDecoder().decode(JsonBool.self, from: data)
+            let decoded = try JSONDecoder().decode(BoolJson.self, from: data)
             if decoded.success {
                 return (decoded.data,response)
             } else {
@@ -91,7 +91,7 @@ extension URLSession {
     func sendRequest(for urlRequest: URLRequest) -> AnyPublisher<[Error],Never> {
         self.dataTaskErrorHandled(for: urlRequest)
         .map { $0.data }
-        .decode(type: JsonType.self, decoder: JSONDecoder())
+        .decode(type: TypeJson.self, decoder: JSONDecoder())
         .tryMap { decoded in
             if !decoded.success {
                 throw NetworkError.FailureMessage(decoded.message ?? "No Failure Message")

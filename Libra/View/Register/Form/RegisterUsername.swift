@@ -45,6 +45,7 @@ struct RegisterUsername: View, Flippable {
         
         self.pages.increment()
         
+        //TODO: Uncomment during release
         /*
         viewModel.asyncSave(field: .username)
         .sink(receiveValue: { success in
