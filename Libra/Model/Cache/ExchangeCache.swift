@@ -7,13 +7,25 @@
 //
 
 import Foundation
+import Combine
 
 struct ExchangeCache: CentralCacheDelegate {
     private let repository = ExchangeRepository()
     
     let frequency: CacheFrequency = .Manual
     
-    func updateCache() {
-        <#code#>
+    func updateCache(cancellable: inout Set<AnyCancellable>) {
+        repository.getRemoteRates()
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    print("Fetch exchange rates for caching succeeded.")
+                case .failure(let error):
+                    print("Fetch exchange rates for caching failed:", error.localizedDescription)
+                }
+                
+            }, receiveValue: { rates in
+                repository.setLocalRates(rates: rates)
+            }).store(in: &cancellable)
     }
 }

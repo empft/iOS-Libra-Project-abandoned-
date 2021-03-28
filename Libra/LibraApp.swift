@@ -14,7 +14,7 @@ struct LibraApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainScreen()
                 .environment(\.managedObjectContext, coreData.container.viewContext)
         }
     }

@@ -8,10 +8,10 @@
 
 import Foundation
 import CoreData
-/// Core Data Base Class
+/// Core Data SIngleton
 struct EnderStorage {
     static let shared = EnderStorage()
-
+    
     let container: NSPersistentContainer
 
     private init(inMemory: Bool = false) {

@@ -10,7 +10,8 @@ import Foundation
 import CoreData
 
 // Can refactor this to generic for singleton core data entity pattern, however I don't think any other data sources will use this pattern
-class UserStorage: EnderStorage {
+class UserStorage {
+    let context = EnderStorage.shared.container.viewContext
     
     // Create a fetched entity that is optional because the fetching process is failable
     // _user is backing property
@@ -56,7 +57,7 @@ class UserStorage: EnderStorage {
         
         original.shallowCopy(from: profile)
         
-        save()
+        try! context.save()
     }
     
     /// Delete everything

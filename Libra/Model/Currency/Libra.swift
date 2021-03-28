@@ -22,4 +22,8 @@ struct Libra: Comparable {
     static func < (lhs: Libra, rhs: Libra) -> Bool {
         lhs.amount == rhs.amount
     }
+    
+    static func `as`(currency: CurrencyType) -> Decimal {
+        
+    }
 }

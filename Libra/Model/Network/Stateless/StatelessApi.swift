@@ -52,7 +52,7 @@ final class StatelessApi {
         return URLSession.shared.getBoolResponse(for: url)
     }
     
-    func getExchangeRates() -> AnyPublisher<[ExchangeRate], Error> {
+    func getExchangeRates() -> AnyPublisher<ExchangeRateDTO, Error> {
         var url = URLRequest(url: URL(string: exchangeRatePath, relativeTo: baseUrl)!)
         url.httpMethod = "GET"
         

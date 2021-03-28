@@ -7,13 +7,15 @@
 //
 
 import Foundation
+import CoreData
 import Combine
 
 struct ExchangeRepository {
     private let api = StatelessApi.shared
-    private let appDelegate = 
+    private let storage = EnderStorage.shared.container.viewContext
+    private let request: NSFetchRequest = ExchangeRate.fetchRequest()
     
-    func getExchangeRates() -> AnyPublisher<LibraRates, Error> {
+    func getRemoteRates() -> AnyPublisher<LibraRates, Error> {
         api.getExchangeRates()
             .subscribe(on: DispatchQueue.global(qos: .unspecified))
             .map { rates in
@@ -21,8 +23,29 @@ struct ExchangeRepository {
             }.eraseToAnyPublisher()
     }
     
-    func getCacheRates() -> LibraRates {
+    /**
+        Get cached exchange rates on UI thread
+     */
+    func getLocalRates() -> LibraRates {
+        let rates = try! storage.fetch(request)
+        return LibraRates.init(from: rates)
+    }
     
+    func setLocalRates(rates: LibraRates) {
+        let child = storage.newPrivateChildContext()
+        child.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        
+        child.perform {
+            rates.toDTO().forEach { item in
+                let exchangeRate = ExchangeRate(context: child)
+                exchangeRate.currency = item.currency
+                exchangeRate.value = NSDecimalNumber(decimal: item.value)
+            }
+            
+            try! child.save()
+        }
     }
     
 }
+
+

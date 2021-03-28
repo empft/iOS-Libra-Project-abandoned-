@@ -25,3 +25,18 @@ extension NSManagedObject {
         }
     }
 }
+
+extension NSManagedObjectContext {
+    public func newPrivateChildContext() -> NSManagedObjectContext{
+        let moc = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        moc.parent = self
+        return moc
+    }
+    
+    public func newUIChildContext() -> NSManagedObjectContext{
+        let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        moc.parent = self
+        return moc
+    }    
+}
+

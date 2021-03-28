@@ -8,13 +8,15 @@
 
 import Foundation
 
-struct ExchangeRate: Decodable {
+typealias ExchangeRateDTO = [ExchangeRateItem]
+
+struct ExchangeRateItem: Decodable {
     let currency: String
     let value: Decimal
 }
 
 struct ExchangeRateJson: Decodable, JsonBase {
     var success: Bool
-    var data: [ExchangeRate]
+    var data: ExchangeRateDTO
     var message: String?
 }

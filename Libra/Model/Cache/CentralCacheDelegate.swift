@@ -7,9 +7,13 @@
 //
 
 import Foundation
+import Combine
 
 protocol CentralCacheDelegate {
     var frequency: CacheFrequency { get }
     
-    func updateCache()
+    /**
+     Store a reference using anycancellable
+     */
+    func updateCache(cancellable: inout Set<AnyCancellable>)
 }
