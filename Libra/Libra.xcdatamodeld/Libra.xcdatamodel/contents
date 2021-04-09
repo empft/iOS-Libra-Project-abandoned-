@@ -21,10 +21,16 @@
         <relationship name="wallet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Wallet" inverseName="walletUserLink" inverseEntity="Wallet"/>
     </entity>
     <entity name="Transaction" representedClassName="Transaction" syncable="YES" codeGenerationType="class">
-        <attribute name="amount" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="from" optional="YES" attributeType="String"/>
-        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="to" optional="YES" attributeType="String"/>
+        <attribute name="address" optional="YES" attributeType="Binary"/>
+        <attribute name="amount" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="fiatAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="fiatCurrency" optional="YES" attributeType="String"/>
+        <attribute name="isSender" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="logo" optional="YES" attributeType="URI"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="reference" optional="YES" attributeType="String"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <attribute name="time" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="UserProfile" representedClassName="UserProfile" syncable="YES" codeGenerationType="class">
         <attribute name="displayName" optional="YES" attributeType="String"/>
@@ -45,7 +51,7 @@
         <element name="ExchangeRate" positionX="-147.3571166992188" positionY="-245.476806640625" width="128" height="74"/>
         <element name="LastUpdated" positionX="-162" positionY="-99" width="128" height="59"/>
         <element name="Linkage" positionX="-125.04296875" positionY="-12.7890625" width="128" height="88"/>
-        <element name="Transaction" positionX="224.546875" positionY="-45.70703125" width="128" height="103"/>
+        <element name="Transaction" positionX="224.546875" positionY="-45.70703125" width="128" height="179"/>
         <element name="UserProfile" positionX="-354.9140625" positionY="-187.21875" width="128" height="133"/>
         <element name="Wallet" positionX="39.31640625" positionY="-182.2421875" width="128" height="89"/>
     </elements>

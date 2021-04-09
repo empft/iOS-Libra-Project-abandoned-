@@ -12,13 +12,16 @@
 		720629DF260F5B3600CECE1E /* CentralCacheDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720629DE260F5B3600CECE1E /* CentralCacheDelegate.swift */; };
 		720629E4260F617900CECE1E /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720629E3260F617900CECE1E /* MulticastDelegate.swift */; };
 		720629EA260F845800CECE1E /* ExchangeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720629E9260F845800CECE1E /* ExchangeCache.swift */; };
-		720F481C2604D48B00A0CD63 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720F481B2604D48B00A0CD63 /* BalanceView.swift */; };
 		720F482226052C3900A0CD63 /* LibraRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720F482126052C3900A0CD63 /* LibraRates.swift */; };
+		722632DB261C58DE00C01632 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722632DA261C58DE00C01632 /* AsyncImage.swift */; };
 		724205DE2604B1C5001F16CA /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724205DD2604B1C5001F16CA /* PaymentView.swift */; };
 		7296F399260929DC00503697 /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7296F398260929DC00503697 /* ExchangeRates.swift */; };
 		72AC0F762607A838008F9B8D /* Libra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AC0F752607A838008F9B8D /* Libra.swift */; };
 		72AC0F7B2607BA21008F9B8D /* ExchangeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AC0F7A2607BA21008F9B8D /* ExchangeRepository.swift */; };
+		72B74ED1261466AA00E7F281 /* ImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B74ED0261466AA00E7F281 /* ImageText.swift */; };
 		72BB3E8C2610FA5D00FE8501 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BB3E8B2610FA5D00FE8501 /* PaymentViewModel.swift */; };
+		72BCD7482614A2C900880899 /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BCD7472614A2C900880899 /* TransactionListView.swift */; };
+		72BCD7582614F54400880899 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BCD7572614F54400880899 /* TransactionRow.swift */; };
 		AD437F7424C1AA740008E162 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437F7324C1AA740008E162 /* URLSession.swift */; };
 		AD437F7624C1AD410008E162 /* ForgetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437F7524C1AD410008E162 /* ForgetScreen.swift */; };
 		AD437F7824C1B8830008E162 /* CodeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437F7724C1B8830008E162 /* CodeField.swift */; };
@@ -111,13 +114,16 @@
 		720629DE260F5B3600CECE1E /* CentralCacheDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralCacheDelegate.swift; sourceTree = "<group>"; };
 		720629E3260F617900CECE1E /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		720629E9260F845800CECE1E /* ExchangeCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCache.swift; sourceTree = "<group>"; };
-		720F481B2604D48B00A0CD63 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		720F482126052C3900A0CD63 /* LibraRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraRates.swift; sourceTree = "<group>"; };
+		722632DA261C58DE00C01632 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		724205DD2604B1C5001F16CA /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		7296F398260929DC00503697 /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
 		72AC0F752607A838008F9B8D /* Libra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libra.swift; sourceTree = "<group>"; };
 		72AC0F7A2607BA21008F9B8D /* ExchangeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRepository.swift; sourceTree = "<group>"; };
+		72B74ED0261466AA00E7F281 /* ImageText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageText.swift; sourceTree = "<group>"; };
 		72BB3E8B2610FA5D00FE8501 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		72BCD7472614A2C900880899 /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
+		72BCD7572614F54400880899 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 		AD437F7324C1AA740008E162 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		AD437F7524C1AD410008E162 /* ForgetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetScreen.swift; sourceTree = "<group>"; };
 		AD437F7724C1B8830008E162 /* CodeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeField.swift; sourceTree = "<group>"; };
@@ -228,11 +234,20 @@
 			path = Currency;
 			sourceTree = "<group>";
 		};
+		722632D9261C580D00C01632 /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				722632DA261C58DE00C01632 /* AsyncImage.swift */,
+			);
+			path = ImageLoader;
+			sourceTree = "<group>";
+		};
 		724205E22604B6DA001F16CA /* Payment */ = {
 			isa = PBXGroup;
 			children = (
 				724205DD2604B1C5001F16CA /* PaymentView.swift */,
-				720F481B2604D48B00A0CD63 /* BalanceView.swift */,
+				72BCD7472614A2C900880899 /* TransactionListView.swift */,
+				72BCD7572614F54400880899 /* TransactionRow.swift */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -409,6 +424,7 @@
 				AD8AE3C824C5F61E00580635 /* Loading.swift */,
 				AD5801CE24DD3F4A00B1C8F8 /* ActivityIndicator.swift */,
 				ADFEE17524CBFECC00276C2F /* NavBackButton.swift */,
+				72B74ED0261466AA00E7F281 /* ImageText.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -583,6 +599,7 @@
 		ADF183E424B96C1800650918 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				722632D9261C580D00C01632 /* ImageLoader */,
 				ADF6DBE4253070D300373E6A /* Map */,
 				AD62E45524DB105E002B2AB4 /* Main */,
 				AD62E45424DB1001002B2AB4 /* PreLogin */,
@@ -791,6 +808,7 @@
 				AD62E45324DB0FBE002B2AB4 /* ForgetPasswordViewModel.swift in Sources */,
 				AD51B58424BB10FF00A4CEF8 /* RegisterDisplayName.swift in Sources */,
 				AD6132F624DFA7D1001BCCBF /* LoginRepository.swift in Sources */,
+				72B74ED1261466AA00E7F281 /* ImageText.swift in Sources */,
 				AD62F6EF24C15A4C0091A788 /* NextButton.swift in Sources */,
 				ADF6DBE6253070EA00373E6A /* FocusMapViewModel.swift in Sources */,
 				7296F399260929DC00503697 /* ExchangeRates.swift in Sources */,
@@ -798,6 +816,7 @@
 				720629E4260F617900CECE1E /* MulticastDelegate.swift in Sources */,
 				ADA9EA89252E3CC400959624 /* PlaceOnMap.swift in Sources */,
 				720629EA260F845800CECE1E /* ExchangeCache.swift in Sources */,
+				72BCD7482614A2C900880899 /* TransactionListView.swift in Sources */,
 				AD62E45124DB0F16002B2AB4 /* LoginViewModel.swift in Sources */,
 				ADABFF3124EBC6920068DDBF /* SessionKey.swift in Sources */,
 				ADD601FE24D9B466005C14DB /* LineReader.swift in Sources */,
@@ -830,13 +849,14 @@
 				ADD79CE924E3D1F2002D0FD1 /* UserConfig.swift in Sources */,
 				AD8AE3C524C5C1E400580635 /* Compability.swift in Sources */,
 				AD8AE3BD24C44B8200580635 /* ErrorField.swift in Sources */,
+				72BCD7582614F54400880899 /* TransactionRow.swift in Sources */,
 				AD647C8B2513434400A88BA2 /* AppStart.swift in Sources */,
-				720F481C2604D48B00A0CD63 /* BalanceView.swift in Sources */,
 				ADABFF3324EBC6A10068DDBF /* WalletKey.swift in Sources */,
 				ADD6020224DA9456005C14DB /* IntExtension.swift in Sources */,
 				AD64A3142529F1AB00970DE1 /* Settings.swift in Sources */,
 				AD88DBF724C9849900A19393 /* RegisterViewModel.swift in Sources */,
 				AD51B58624BB111100A4CEF8 /* RegisterUsername.swift in Sources */,
+				722632DB261C58DE00C01632 /* AsyncImage.swift in Sources */,
 				ADF183E724B973AC00650918 /* LoginScreen.swift in Sources */,
 				ADD0A2D224D152B500BE723F /* BoolJson.swift in Sources */,
 				AD64A30A2529F17300970DE1 /* Friend.swift in Sources */,
