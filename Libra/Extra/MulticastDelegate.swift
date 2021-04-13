@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Stores and executes multiple delegates
+ */
 class MulticastDelegate <T> {
   private let delegates: NSHashTable<AnyObject> = NSHashTable.weakObjects()
 

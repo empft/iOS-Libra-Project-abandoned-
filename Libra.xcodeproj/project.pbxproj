@@ -16,9 +16,12 @@
 		722632DB261C58DE00C01632 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722632DA261C58DE00C01632 /* AsyncImage.swift */; };
 		724205DE2604B1C5001F16CA /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724205DD2604B1C5001F16CA /* PaymentView.swift */; };
 		7296F399260929DC00503697 /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7296F398260929DC00503697 /* ExchangeRates.swift */; };
+		729FFF1C26203D6D00EEA8D6 /* TransactionHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729FFF1B26203D6D00EEA8D6 /* TransactionHistoryRepository.swift */; };
+		729FFF21262049BD00EEA8D6 /* SectionedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729FFF20262049BD00EEA8D6 /* SectionedList.swift */; };
 		72AC0F762607A838008F9B8D /* Libra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AC0F752607A838008F9B8D /* Libra.swift */; };
 		72AC0F7B2607BA21008F9B8D /* ExchangeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AC0F7A2607BA21008F9B8D /* ExchangeRepository.swift */; };
-		72B74ED1261466AA00E7F281 /* ImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B74ED0261466AA00E7F281 /* ImageText.swift */; };
+		72B6A0952622E7D5007E1793 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B6A0942622E7D5007E1793 /* TransactionDetailView.swift */; };
+		72B6A0A2262307F0007E1793 /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B6A0A1262307F0007E1793 /* PaymentButton.swift */; };
 		72BB3E8C2610FA5D00FE8501 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BB3E8B2610FA5D00FE8501 /* PaymentViewModel.swift */; };
 		72BCD7482614A2C900880899 /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BCD7472614A2C900880899 /* TransactionListView.swift */; };
 		72BCD7582614F54400880899 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BCD7572614F54400880899 /* TransactionRow.swift */; };
@@ -118,9 +121,12 @@
 		722632DA261C58DE00C01632 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		724205DD2604B1C5001F16CA /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		7296F398260929DC00503697 /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
+		729FFF1B26203D6D00EEA8D6 /* TransactionHistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryRepository.swift; sourceTree = "<group>"; };
+		729FFF20262049BD00EEA8D6 /* SectionedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedList.swift; sourceTree = "<group>"; };
 		72AC0F752607A838008F9B8D /* Libra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libra.swift; sourceTree = "<group>"; };
 		72AC0F7A2607BA21008F9B8D /* ExchangeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRepository.swift; sourceTree = "<group>"; };
-		72B74ED0261466AA00E7F281 /* ImageText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageText.swift; sourceTree = "<group>"; };
+		72B6A0942622E7D5007E1793 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
+		72B6A0A1262307F0007E1793 /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
 		72BB3E8B2610FA5D00FE8501 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		72BCD7472614A2C900880899 /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
 		72BCD7572614F54400880899 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
@@ -245,11 +251,21 @@
 		724205E22604B6DA001F16CA /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				72B6A09A2622E803007E1793 /* History */,
 				724205DD2604B1C5001F16CA /* PaymentView.swift */,
-				72BCD7472614A2C900880899 /* TransactionListView.swift */,
-				72BCD7572614F54400880899 /* TransactionRow.swift */,
+				72B6A0A1262307F0007E1793 /* PaymentButton.swift */,
 			);
 			path = Payment;
+			sourceTree = "<group>";
+		};
+		72B6A09A2622E803007E1793 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				72BCD7472614A2C900880899 /* TransactionListView.swift */,
+				72BCD7572614F54400880899 /* TransactionRow.swift */,
+				72B6A0942622E7D5007E1793 /* TransactionDetailView.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		72BB3E8A2610FA4F00FE8501 /* Payment */ = {
@@ -338,6 +354,7 @@
 				ADD601FD24D9B466005C14DB /* LineReader.swift */,
 				ADD6020124DA9456005C14DB /* IntExtension.swift */,
 				720629E3260F617900CECE1E /* MulticastDelegate.swift */,
+				729FFF20262049BD00EEA8D6 /* SectionedList.swift */,
 			);
 			path = Extra;
 			sourceTree = "<group>";
@@ -424,7 +441,6 @@
 				AD8AE3C824C5F61E00580635 /* Loading.swift */,
 				AD5801CE24DD3F4A00B1C8F8 /* ActivityIndicator.swift */,
 				ADFEE17524CBFECC00276C2F /* NavBackButton.swift */,
-				72B74ED0261466AA00E7F281 /* ImageText.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -435,6 +451,7 @@
 				AD6132F524DFA7D1001BCCBF /* LoginRepository.swift */,
 				AD814D5724E443CF00F49986 /* UserRepository.swift */,
 				72AC0F7A2607BA21008F9B8D /* ExchangeRepository.swift */,
+				729FFF1B26203D6D00EEA8D6 /* TransactionHistoryRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -808,7 +825,7 @@
 				AD62E45324DB0FBE002B2AB4 /* ForgetPasswordViewModel.swift in Sources */,
 				AD51B58424BB10FF00A4CEF8 /* RegisterDisplayName.swift in Sources */,
 				AD6132F624DFA7D1001BCCBF /* LoginRepository.swift in Sources */,
-				72B74ED1261466AA00E7F281 /* ImageText.swift in Sources */,
+				72B6A0A2262307F0007E1793 /* PaymentButton.swift in Sources */,
 				AD62F6EF24C15A4C0091A788 /* NextButton.swift in Sources */,
 				ADF6DBE6253070EA00373E6A /* FocusMapViewModel.swift in Sources */,
 				7296F399260929DC00503697 /* ExchangeRates.swift in Sources */,
@@ -838,6 +855,7 @@
 				ADE4297824E90B1A005F7625 /* QuantumKeychain.swift in Sources */,
 				AD8AE3C924C5F61E00580635 /* Loading.swift in Sources */,
 				AD51B58224BB10ED00A4CEF8 /* RegisterVerification.swift in Sources */,
+				72B6A0952622E7D5007E1793 /* TransactionDetailView.swift in Sources */,
 				AD8AE3C724C5F1C200580635 /* LoadableButton.swift in Sources */,
 				AD7030BA250F896B00F1FBFA /* UserError.swift in Sources */,
 				AD9D62DE24FA373A003B2D6E /* UserStorage.swift in Sources */,
@@ -848,11 +866,13 @@
 				AD64A30F2529F19C00970DE1 /* Nearby.swift in Sources */,
 				ADD79CE924E3D1F2002D0FD1 /* UserConfig.swift in Sources */,
 				AD8AE3C524C5C1E400580635 /* Compability.swift in Sources */,
+				729FFF21262049BD00EEA8D6 /* SectionedList.swift in Sources */,
 				AD8AE3BD24C44B8200580635 /* ErrorField.swift in Sources */,
 				72BCD7582614F54400880899 /* TransactionRow.swift in Sources */,
 				AD647C8B2513434400A88BA2 /* AppStart.swift in Sources */,
 				ADABFF3324EBC6A10068DDBF /* WalletKey.swift in Sources */,
 				ADD6020224DA9456005C14DB /* IntExtension.swift in Sources */,
+				729FFF1C26203D6D00EEA8D6 /* TransactionHistoryRepository.swift in Sources */,
 				AD64A3142529F1AB00970DE1 /* Settings.swift in Sources */,
 				AD88DBF724C9849900A19393 /* RegisterViewModel.swift in Sources */,
 				AD51B58624BB111100A4CEF8 /* RegisterUsername.swift in Sources */,

@@ -11,7 +11,7 @@ import Combine
 
 private extension View {
     func listStyle() -> some View {
-        self.frame(width: 48, height: 48, alignment: .center)
+        self.frame(width: 40, height: 40, alignment: .center)
             .clipShape(Circle())
     }
 }
@@ -54,7 +54,7 @@ struct TransactionRow: View {
                     Color(RandomColors(theme: colorScheme)
                             .background(int: rand))
                     Text(initial)
-                        .font(.largeTitle)
+                        .font(.title3)
                 }.listStyle()
                     
             }

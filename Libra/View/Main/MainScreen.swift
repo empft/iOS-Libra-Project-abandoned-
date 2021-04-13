@@ -16,6 +16,7 @@ struct MainScreen: View {
                     Label("Payment", systemImage: "creditcard.fill")
                 }
         }
+        
     }
 }
 

@@ -27,8 +27,6 @@ User based Persistence and Device based persistence
 
 
 
-
-
 ---
 ## Third Party Codes
 
@@ -43,6 +41,30 @@ for line in reader {
 }
 
 ```
+
+---
+## Reusable Code
+
+### SectionedList
+Separates a list into multiple sections for UI
+
+Example Usage:
+```
+let data = SectionedList.create(transactions) { (item: TransactionHistory) in
+    dateFormatter.string(from: item.date ?? Date(timeIntervalSince1970: 0))
+}
+
+List {
+    ForEach(data) { (section: SectionedList.SectionedItem) in
+        Section(header: Text(section.title)) {
+            ForEach(section.items) { (item: TransactionHistory) in
+                Text(item.text)
+            }
+        }
+    }
+}
+```
+
 
 ---
 ## Reusable View Components
