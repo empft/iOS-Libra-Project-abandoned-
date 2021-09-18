@@ -9,100 +9,63 @@
 import Foundation
 import Combine
 
-enum NetworkError: Error {
-    case InvalidResponseCode
-    case FailureMessage(String)
-}
-
 extension URLSession {
-    // Handle simple Http code error and return a publisher
-    private func dataTaskErrorHandled(for urlRequest: URLRequest) -> AnyPublisher<(data: Data, response: URLResponse),Error> {
-        self.dataTaskPublisher(for: urlRequest)
-            .tryMap { (data, response) in
-                if !((200...299).contains((response as! HTTPURLResponse).statusCode)) {
-                    throw NetworkError.InvalidResponseCode
+    
+    private func handleError(publisher: DataTaskPublisher) -> AnyPublisher<(Data, HTTPURLResponse), Error> {
+        return publisher.tryMap { (data, response) in
+            let httpResponse = response as! HTTPURLResponse
+            let statusCode = httpResponse.statusCode
+            let decoder = JSONDecoder()
+            if !((200...299).contains(statusCode)) {
+                if !data.isEmpty {
+                    let result = try decoder.decode(LabelledHTTPError.self, from: data)
+                    throw ResponseError.vanilla(code: result.code, message: result.message)
                 }
-                return (data, response)
+                throw ResponseError.unexpected("Unknown server side error")
+            }
+            return (data, httpResponse)
         }.eraseToAnyPublisher()
     }
     
-    // return decoded data with everything handled
-    func getData<T: Decodable & JsonBase>(for urlRequest: URLRequest, using jsonStruct: T.Type) -> AnyPublisher<T.ResultType,Error> {
-        self.dataTaskErrorHandled(for: urlRequest)
-        .map { $0.data }
-        .decode(type: T.self, decoder: JSONDecoder())
-        .tryMap { decoded in
-            if decoded.success {
-                return decoded.data
-            } else {
-                throw NetworkError.FailureMessage(decoded.message ?? "No Failure Message")
-            }
-        }
-        .subscribe(on: DispatchQueue.global(qos: .unspecified))
-        .eraseToAnyPublisher()
+    func errorHandledPublisher(for urlRequest: URLRequest) -> AnyPublisher<(Data, HTTPURLResponse), Error> {
+        self.handleError(publisher: self.dataTaskPublisher(for: urlRequest))
     }
     
-    // return decoded boolean result with everything handled
-    func getBool(for urlRequest: URLRequest) -> AnyPublisher<Bool,Error> {
-        self.dataTaskErrorHandled(for: urlRequest)
-        .map { $0.data }
-        .decode(type: BoolJson.self, decoder: JSONDecoder())
-        .tryMap { decoded in
-            if decoded.success {
-                return decoded.data
-            } else {
-                throw NetworkError.FailureMessage(decoded.message ?? "No Failure Message")
-            }
-        }
-        .subscribe(on: DispatchQueue.global(qos: .unspecified))
-        .eraseToAnyPublisher()
+    func errorHandledPublisher(for url: URL) -> AnyPublisher<(Data, HTTPURLResponse), Error> {
+        self.handleError(publisher: self.dataTaskPublisher(for: url))
     }
     
-    // return decoded data and response with everything handled
-    func getDataResponse<T: Decodable & JsonBase>(for urlRequest: URLRequest, using jsonStruct: T.Type) -> AnyPublisher<(data: T.ResultType, response: URLResponse),Error> {
-        self.dataTaskErrorHandled(for: urlRequest)
-        .tryMap { (data, response) in
-            let decoded = try JSONDecoder().decode(T.self, from: data)
-            if decoded.success {
-                return (decoded.data,response)
-            } else {
-                throw NetworkError.FailureMessage(decoded.message ?? "No Failure Message")
-            }
-        }
-        .subscribe(on: DispatchQueue.global(qos: .unspecified))
-        .eraseToAnyPublisher()
+    func errorHandledPublisherWithResponse<T: Decodable>(for urlRequest: URLRequest, using jsonStruct: T.Type) -> AnyPublisher<(T, HTTPURLResponse), Error> {
+        self.handleError(publisher: self.dataTaskPublisher(for: urlRequest))
+            .tryMap { (data, response) in
+                let decoder = JSONDecoder()
+                return (try decoder.decode(T.self, from: data), response)
+            }.eraseToAnyPublisher()
     }
     
-    // return decoded boolean result and response with everything handled
-    func getBoolResponse(for urlRequest: URLRequest) -> AnyPublisher<(data: Bool, response: URLResponse),Error> {
-        self.dataTaskErrorHandled(for: urlRequest)
-        .tryMap { (data, response) in
-            let decoded = try JSONDecoder().decode(BoolJson.self, from: data)
-            if decoded.success {
-                return (decoded.data,response)
-            } else {
-                throw NetworkError.FailureMessage(decoded.message ?? "No Failure Message")
-            }
-        }
-        .subscribe(on: DispatchQueue.global(qos: .unspecified))
-        .eraseToAnyPublisher()
+    func errorHandledPublisherWithResponse<T: Decodable>(for url: URL, using jsonStruct: T.Type) -> AnyPublisher<(T, HTTPURLResponse), Error> {
+        self.handleError(publisher: self.dataTaskPublisher(for: url))
+            .tryMap { (data, response) in
+                let decoder = JSONDecoder()
+                return (try decoder.decode(T.self, from: data), response)
+            }.eraseToAnyPublisher()
     }
     
-    func sendRequest(for urlRequest: URLRequest) -> AnyPublisher<[Error],Never> {
-        self.dataTaskErrorHandled(for: urlRequest)
-        .map { $0.data }
-        .decode(type: TypeJson.self, decoder: JSONDecoder())
-        .tryMap { decoded in
-            if !decoded.success {
-                throw NetworkError.FailureMessage(decoded.message ?? "No Failure Message")
-            }
-            return []
-        }.catch { error -> Just<[Error]> in
-            return Just([error])
-        }
-        .subscribe(on: DispatchQueue.global(qos: .unspecified))
-        .eraseToAnyPublisher()
+    func errorHandledPublisher<T: Decodable>(for urlRequest: URLRequest, using jsonStruct: T.Type) -> AnyPublisher<T, Error> {
+        self.handleError(publisher: self.dataTaskPublisher(for: urlRequest))
+            .tryMap { (data, _) in
+                let decoder = JSONDecoder()
+                return try decoder.decode(T.self, from: data)
+            }.eraseToAnyPublisher()
     }
+    
+    func errorHandledPublisher<T: Decodable>(for url: URL, using jsonStruct: T.Type) -> AnyPublisher<T, Error> {
+        self.handleError(publisher: self.dataTaskPublisher(for: url))
+            .tryMap { (data, _) in
+                let decoder = JSONDecoder()
+                return try decoder.decode(T.self, from: data)
+            }.eraseToAnyPublisher()
+    }
+    
+    
 }
-
-

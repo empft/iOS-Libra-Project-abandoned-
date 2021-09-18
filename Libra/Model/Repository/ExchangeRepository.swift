@@ -11,7 +11,7 @@ import CoreData
 import Combine
 
 struct ExchangeRepository {
-    private let api = StatelessApi.shared
+    private let api = LoginApi(baseURL: <#URL#>, session: <#URLSession#>)
     private let storage = EnderStorage.shared.container.viewContext
     private let request: NSFetchRequest = ExchangeRate.fetchRequest()
     
